@@ -12,8 +12,8 @@ console.log = function() {
   originalLog.apply(console, [`[${timestamp}]`, ...arguments]);
 };
 
-// 接收启动参数作为端口号，默认8081
-const PORT = process.argv[2] || 8081;
+// 接收启动参数作为端口号，默认8001
+const PORT = process.argv[2] || 8001;
 const server = new WebSocket.Server({ port: PORT });
 
 const SEND_TYPE_REG = '1001'; // 注册后发送用户id
